@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import {ThemeOptions} from '../../../../../theme-options';
 
 @Component({
@@ -7,10 +9,22 @@ import {ThemeOptions} from '../../../../../theme-options';
 })
 export class UserBoxComponent implements OnInit {
 
-  constructor(public globals: ThemeOptions) {
+  constructor(
+    public globals: ThemeOptions,
+    private router: Router
+    ) {
   }
 
   ngOnInit() {
+  }
+
+  onLogout() {
+    localStorage.removeItem(environment.loginDataKey);
+    this.gotoLogin();
+  }
+
+  gotoLogin() {
+    this.router.navigateByUrl('auth/login')
   }
 
 }

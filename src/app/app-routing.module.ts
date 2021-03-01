@@ -51,11 +51,14 @@ import {LayoutComponent} from './DemoPages/Forms/Elements/layout/layout.componen
 // Charts
 
 import {ChartjsComponent} from './DemoPages/Charts/chartjs/chartjs.component';
+import { AuthGuard } from './gaurds/auth.guard';
+import { DashboardGuard } from './gaurds/dashboard.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: BaseLayoutComponent,
+    canActivate: [DashboardGuard],
     children: [
 
       // Dashboads
@@ -101,15 +104,13 @@ const routes: Routes = [
     ]
   },
   {
-    path: '',
+    path: 'auth',
     component: PagesLayoutComponent,
+    canActivate: [AuthGuard],
     children: [
-
-      // User Pages
-
-      {path: 'pages/login-boxed', component: LoginBoxedComponent, data: {extraParameter: ''}},
-      {path: 'pages/register-boxed', component: RegisterBoxedComponent, data: {extraParameter: ''}},
-      {path: 'pages/forgot-password-boxed', component: ForgotPasswordBoxedComponent, data: {extraParameter: ''}},
+      {path: 'login', component: LoginBoxedComponent, data: {extraParameter: ''}},
+      {path: 'register', component: RegisterBoxedComponent, data: {extraParameter: ''}},
+      {path: 'forgot-password', component: ForgotPasswordBoxedComponent, data: {extraParameter: ''}},
     ]
   },
   {path: '**', redirectTo: ''}

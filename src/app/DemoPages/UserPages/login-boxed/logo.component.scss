@@ -1,0 +1,27 @@
+.logo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 30px;
+    }
+
+    .logo-text {
+        font-size: 25px;
+        margin-left: 12px;
+        color: #0005bb;
+        font-weight: bold;
+    }
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #929292;
+    font-weight: 500;
+}
+
+.login-btn {
+    background: #6161f7;
+}

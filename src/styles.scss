@@ -1,1 +1,12 @@
 @import "assets/base";
+
+.button-center {
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    
+    button {
+        font-weight: bold;
+        border: 0;
+    }
+}

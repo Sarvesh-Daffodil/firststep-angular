@@ -1,0 +1,21 @@
+.loader-main {
+    .loader-div-wrapper {
+        display: flex;
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        justify-content: center;
+        z-index: 999999;
+        align-items: center;
+        // background: rgba(0, 0, 0, 0.84);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        .loader-image-wrapper {
+            img {
+                width: 60px;
+            }
+        }
+    }
+}
