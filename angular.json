@@ -30,8 +30,7 @@
               "src/styles.scss",
               "./node_modules/font-awesome/scss/font-awesome.scss"
             ],
-            "scripts": [
-            ],
+            "scripts": [],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -110,6 +109,10 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     },
