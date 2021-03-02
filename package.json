@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port=$PORT",
+    "start": "ng serve --base-href=/firststep-angular/ --port=$PORT",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy"
+    "deploy": "ng deploy --base-href=/firststep-angular/"
   },
   "private": true,
   "dependencies": {
