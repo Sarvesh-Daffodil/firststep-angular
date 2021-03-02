@@ -1,14 +1,14 @@
 {
-  "name": "architectui-angular-free",
-  "version": "0.0.0",
+  "name": "firststep.ai",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --base-href=/firststep-angular/ --port=$PORT",
+    "start": "ng serve --port=$PORT",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=/firststep-angular/"
+    "deploy": "ng deploy"
   },
   "private": true,
   "dependencies": {
